@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router(); // Router with a capital 'R' is a mini-application
-
+require('dotenv').load();
 var mongo = require('monk');
 // var db = mongo('localhost/movies');
 var db = mongo(process.env.MONGOLAB_URI);
