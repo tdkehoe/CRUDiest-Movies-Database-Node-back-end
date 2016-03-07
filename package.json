@@ -1,0 +1,28 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "My first Express app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --harmony app.js",
+    "dev": "nodemon --harmony app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "*",
+    "hbs": "*",
+    "mongodb": "^1.4.4",
+    "monk": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tdkehoe/express-app.git"
+  },
+  "author": "Thomas David Kehoe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdkehoe/express-app/issues"
+  },
+  "homepage": "https://github.com/tdkehoe/express-app#readme"
+}
