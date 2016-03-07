@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router(); // Router with a capital 'R' is a mini-application
 
 var mongo = require('monk');
-var db = mongo('localhost/movies');
+// var db = mongo('localhost/movies');
+var db = mongo(process.env.MONGOLAB_URI);
 // var db = require('monk')('localhost/movies');
 var Movies = db.get('movies');
 
