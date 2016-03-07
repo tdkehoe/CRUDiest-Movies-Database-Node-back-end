@@ -11,6 +11,5 @@ app.use(bodyParser.json()); // enables reading a JSON object in the body of POST
 app.use('/', movies); // middleware to serve routes
 
 // Server
-// app.listen(process.env.PORT || 8080); // starts server
-app.listen(3000); // starts server
+app.listen(process.env.PORT || 8080); // starts server
 console.log("Woot! Server started on localhost:3000; press Ctrl-C to terminate.");
