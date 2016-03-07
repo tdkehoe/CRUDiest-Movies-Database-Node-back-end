@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
     "dotenv": "^2.0.0",
     "express": "*",
     "hbs": "*",
