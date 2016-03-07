@@ -1,6 +1,7 @@
 // Dependencies
 var express = require('express'); // connects Express
 var app = express(); // create Express application object
+require('dotenv').load();
 var bodyParser = require('body-parser'); // connects body-parser
 var cors = require('cors');
 var movies = require('./routes/routes.js'); // connects routes.js
@@ -12,5 +13,5 @@ app.use(bodyParser.json()); // enables reading a JSON object in the body of POST
 app.use('/', movies); // middleware to serve routes
 
 // Server
-app.listen(3000); // starts server
+app.listen(process.env.PORT || 8080); // starts server
 console.log("Woot! Server started on localhost:3000; press Ctrl-C to terminate.");
