@@ -3,7 +3,7 @@ var router = express.Router(); // Router with a capital 'R' is a mini-applicatio
 require('dotenv').load();
 var mongo = require('monk');
 // var db = mongo('localhost/movies');
-var db = mongo(process.env.MONGOLAB_URI);
+var db = mongo(process.env.MONGOLAB_URI || 'localhost/movies');
 // var db = require('monk')('localhost/movies');
 var Movies = db.get('movies');
 
