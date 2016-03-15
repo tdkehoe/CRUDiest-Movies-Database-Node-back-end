@@ -33,6 +33,15 @@ router.post('/movies/', function(request, response) { // CREATE
   })
 });
 
+router.get('/movies/:id/edit', function(request, response) { // EDIT
+  Movies.findOne({_id: request.params.id}, function(error, movie){
+    if (error) {
+      response.send(error);
+    }
+    response.status(200).json(movie);
+  })
+});
+
 router.get('/movies/:id', function(request, response) { // SHOW
   Movies.findOne({_id: request.params.id}, function(error, movie){
     if (error) {
